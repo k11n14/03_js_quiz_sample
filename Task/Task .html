@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <h1>カード検索機（仮）</h1>
+  <!-- <p id = "Caed_name"></p>
+<p id="Caed_cost"></p>
+<p id="Caed_coloer"></p>
+<p id="Caed_type"></p>
+<p id="Caed_ place"></p>
+<p id="Caed_buy_time"></p>
+<p id="Caed_buy_price"></p>
+<p id="Caed_memo"></p>
+<p id="Caed_"></p>
+<p id="Caed_"></p> -->
+  <p id="question"></p>
+
+  <ul id="Echo">
+    <!-- <li><button id="answer00">0</button></li>
+    <li><button id="answer01">1</button></li>
+    <li><button id="answer02">2</button></li>
+    <li><button id="answer03">3</button></li>
+    <li><button id="answer04">4</button></li>
+    <li><button id="answer05">5</button></li> -->
+
+  </ul>
+
+  <script>
+    const Card_date = [
+      {
+        question: ['色'],
+        answers: ['白', '青', '黒', '赤', '緑', '無色', '多色',],
+      }
+    ]
+
+    console.log(Card_date)
+    console.log(Card_date[0])
+    console.log(Card_date[0].question)
+    console.log(Card_date[0].answers)
+    console.log(Card_date[0].answers[0])
+    console.log(Card_date.length)
+    console.log(Card_date[0].question.length)
+    console.log(Card_date[0].answers.length)
+
+    const array = [];
+
+    for (let i = 0; i < Card_date[0].answers.length; i++) {
+      array.push("<li>" + Card_date[0].answers[i] + "</li>");
+      console.log(Card_date[0].answers[i])
+    }
+
+    $("#Echo").html(array);
+
+  </script>
+
+</body>
+
+</html>
