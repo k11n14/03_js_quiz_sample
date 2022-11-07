@@ -57,6 +57,8 @@
     // ここ↓表示されるの出題文
     console.log(Card_date[0].question)
     console.log(Card_date[0].answers)
+    console.log(Card_date[1].answers)
+    console.log(Card_date[2].answers)
     // ここ↓表示されるの出題文に対する答え
     console.log(Card_date[0].answers[0])
     console.log(Card_date.length)
@@ -70,9 +72,9 @@
     const question_answer_number = [];
 
     // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
-    for (let i = 0; i < Card_date[0].answers.length; i++) {
-      question_text.push("<li><button id=\"answer0i\">" + Card_date[0].answers[i] + "</button></li>");
-      console.log(Card_date[0].answers[i])
+    for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
+      question_text.push("<li><button id=answer0" + [i] + ">" + Card_date[question_answer_number.length].answers[i] + "</button></li>");
+      console.log(Card_date[question_answer_number.length].answers[i])
     }
     $("#Echo").html(question_text);
 
@@ -91,11 +93,13 @@
       $("#Question").text(Card_date[question_answer_number.length].question);
       // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
       for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
-        question_text.push("<li><button id=\"answer0i\">" + Card_date[question_answer_number.length].answers[i] + "</button></li>");
+        question_text.push("<li><button id=answer0" + [i] + ">" + Card_date[question_answer_number.length].answers[i] + "</button></li>");
         console.log(Card_date[question_answer_number.length].answers[i]);
+        $("#Echo").html(question_text);
+        console.log(question_answer_number.length)
       }
 
-      $("#Echo").html(question_text);
+
       console.log(question_text)
     });
 
