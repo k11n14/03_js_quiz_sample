@@ -86,27 +86,33 @@
     console.log(question_text)
 
     $(document).on("click", '.Answer', function () {
-      //  question_textの中身を初期化
-      question_text = [];
-      console.log(question_text)
-      // 質問の答案してる数を１増やす
-      question_answer_number.push(1)
-      // 出題文を書き換え
-      $("#Question").text(Card_date[question_answer_number.length].question);
-      // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
-      for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
-        question_text.push(
-          "<li><button id=answer0" + [i] + " class=Answer >" + Card_date[question_answer_number.length].answers[i] + "</button></li>"
-        );
-        console.log(Card_date[question_answer_number.length].answers[i]);
+      if (question_answer_number.length < Card_date.length-1) {
+        //  question_textの中身を初期化
+        question_text = [];
+        console.log(question_text)
+        // 質問の答案してる数を１増やす
+        question_answer_number.push(1)
         console.log(question_answer_number.length)
-      }
-      $("#Echo").html(question_text);
-      console.log(question_text)
+        console.log(Card_date.length)
 
-      const id = $(this).text();
-      console.log(id)
-      $("#Selection_text").append(id+" ")
+        // 出題文を書き換え
+        $("#Question").text(Card_date[question_answer_number.length].question);
+        // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
+
+        for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
+          question_text.push(
+            "<li><button id=answer0" + [i] + " class=Answer >" + Card_date[question_answer_number.length].answers[i] + "</button></li>"
+          );
+          console.log(Card_date[question_answer_number.length].answers[i]);
+          console.log(question_answer_number.length)
+        }
+        $("#Echo").html(question_text);
+        console.log(question_text)
+
+        const id = $(this).text();
+        console.log(id)
+        $("#Selection_text").append(id + " ")
+      } 
     });
 
   </script>
