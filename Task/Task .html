@@ -70,6 +70,7 @@
 
     let question_text = [];
     const question_answer_number = [];
+    const button_c = [];
 
     // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
     for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
@@ -86,7 +87,11 @@
     console.log(question_text)
 
     $(document).on("click", '.Answer', function () {
-      if (question_answer_number.length < Card_date.length-1) {
+
+      button_c.push(1)
+      console.log(button_c)
+      console.log(button_c.length)
+      if (question_answer_number.length < Card_date.length - 1) {
         //  question_textの中身を初期化
         question_text = [];
         console.log(question_text)
@@ -108,16 +113,25 @@
         }
         $("#Echo").html(question_text);
         console.log(question_text)
-
-        const id = $(this).text();
-        console.log(id)
-        $("#Selection_text").append(id + " ")
       } 
-    });
+      else if(button_c.length===Card_date.length){ $("#Echo").html("") }
 
+
+      console.log(question_answer_number.length)
+      console.log(Card_date.length)
+
+
+      const id = $(this).text();
+      console.log(id)
+      $("#Selection_text").append(id + " ")
+
+
+    });
+    console.log()
   </script>
   <button>戻る</button>
   <div id="Selection_text"></div>
+
 </body>
 
 </html>
