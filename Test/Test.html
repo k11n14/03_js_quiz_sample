@@ -28,8 +28,8 @@
     console.log(resultTable[1][0]); console.log(resultTable[2][0]);
     console.log(result);
   </script>
-<!-- ---------------------------------------------------------------------------------------- -->
-  <p id = "echo"></p>
+  <!-- ---------------------------------------------------------------------------------------- -->
+  <p id="echo"></p>
   <script>
     const list01 = ["月", "火", "水", "木", "金", "土", "日"];
     // 1
@@ -42,6 +42,15 @@
     $("#echo").html(array);
   </script>
   <!-- ---------------------------------------------------------------------------------------- -->
+  <button class="btn" id="btn1">ボタン1</button>
+  <button class="btn" id="btn2">ボタン2</button>
+  <script>
+    $('.btn').on('click', function () {
+      var id = $(this).attr("id");
+      console.log(id)
+      alert(id);
+    });
+  </script>
 </body>
 
 </html>

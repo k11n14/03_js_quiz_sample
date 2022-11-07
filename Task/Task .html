@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h1>カード検索機（仮）</h1>
+  <h1>カード登録＆検索機（仮）</h1>
   <!-- <p id = "Caed_name"></p>
 <p id="Caed_cost"></p>
 <p id="Caed_coloer"></p>
@@ -75,7 +75,7 @@
     for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
       question_text.push(
         "<li><button id=answer0" + [i] + " class=Answer >" + Card_date[question_answer_number.length].answers[i] + "</button></li>"
-        );
+      );
       console.log(Card_date[question_answer_number.length].answers[i])
     }
     $("#Echo").html(question_text);
@@ -85,7 +85,7 @@
     console.log(question_answer_number.length)
     console.log(question_text)
 
-    $(document).on("click", '.Answer',  function () {
+    $(document).on("click", '.Answer', function () {
       //  question_textの中身を初期化
       question_text = [];
       console.log(question_text)
@@ -97,18 +97,17 @@
       for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
         question_text.push(
           "<li><button id=answer0" + [i] + " class=Answer >" + Card_date[question_answer_number.length].answers[i] + "</button></li>"
-          );
+        );
         console.log(Card_date[question_answer_number.length].answers[i]);
-        $("#Echo").html(question_text);
         console.log(question_answer_number.length)
       }
-
-
+      $("#Echo").html(question_text);
       console.log(question_text)
     });
 
   </script>
-<button>Test</button>
+  <button>戻る</button>
+  <div id="Selection_text">選んだ選択をここに表示</div>
 </body>
 
 </html>
