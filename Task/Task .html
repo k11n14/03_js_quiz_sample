@@ -73,7 +73,9 @@
 
     // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
     for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
-      question_text.push("<li><button id=answer0" + [i] + ">" + Card_date[question_answer_number.length].answers[i] + "</button></li>");
+      question_text.push(
+        "<li><button id=answer0" + [i] + " class=Answer >" + Card_date[question_answer_number.length].answers[i] + "</button></li>"
+        );
       console.log(Card_date[question_answer_number.length].answers[i])
     }
     $("#Echo").html(question_text);
@@ -83,7 +85,7 @@
     console.log(question_answer_number.length)
     console.log(question_text)
 
-    $("button").on("click", function () {
+    $(document).on("click", '.Answer',  function () {
       //  question_textの中身を初期化
       question_text = [];
       console.log(question_text)
@@ -93,7 +95,9 @@
       $("#Question").text(Card_date[question_answer_number.length].question);
       // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
       for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
-        question_text.push("<li><button id=answer0" + [i] + ">" + Card_date[question_answer_number.length].answers[i] + "</button></li>");
+        question_text.push(
+          "<li><button id=answer0" + [i] + " class=Answer >" + Card_date[question_answer_number.length].answers[i] + "</button></li>"
+          );
         console.log(Card_date[question_answer_number.length].answers[i]);
         $("#Echo").html(question_text);
         console.log(question_answer_number.length)
@@ -104,7 +108,7 @@
     });
 
   </script>
-
+<button>Test</button>
 </body>
 
 </html>
