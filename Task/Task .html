@@ -103,11 +103,15 @@
       }
       $("#Echo").html(question_text);
       console.log(question_text)
+
+      const id = $(this).text();
+      console.log(id)
+      $("#Selection_text").append(id+" ")
     });
 
   </script>
   <button>戻る</button>
-  <div id="Selection_text">選んだ選択をここに表示</div>
+  <div id="Selection_text"></div>
 </body>
 
 </html>
