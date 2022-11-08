@@ -73,16 +73,16 @@
         } else {
           $("#result").text("不正解");
           results.push("ng");
-        } 4
+        }
       }
       console.log(results)
       console.log(results.length)
       if (results.length < quiz.length) {
-        $("#question").text(quiz[results.length].question)
-        $("#answer00").text(quiz[results.length].answers[0])
-        $("#answer01").text(quiz[results.length].answers[1])
-        $("#answer02").text(quiz[results.length].answers[2])
-        $("#question_number").text("第" + (results.length + 1) + "問")
+        $("#question").html(quiz[results.length].question)
+        $("#answer00").html(quiz[results.length].answers[0])
+        $("#answer01").html(quiz[results.length].answers[1])
+        $("#answer02").html(quiz[results.length].answers[2])
+        $("#question_number").html("第" + (results.length + 1) + "問")
       }
     });
 

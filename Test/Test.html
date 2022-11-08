@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test</title>
+  <title></title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -28,8 +28,8 @@
     console.log(resultTable[1][0]); console.log(resultTable[2][0]);
     console.log(result);
   </script>
-<!-- ---------------------------------------------------------------------------------------- -->
-  <p id = "echo"></p>
+  <!-- ---------------------------------------------------------------------------------------- -->
+  <p id="echo"></p>
   <script>
     const list01 = ["月", "火", "水", "木", "金", "土", "日"];
     // 1
@@ -42,6 +42,20 @@
     $("#echo").html(array);
   </script>
   <!-- ---------------------------------------------------------------------------------------- -->
+  <button class="btn" id="btn1">ボタン1</button>
+  <button class="btn" id="btn2">ボタン2</button>
+  <script>
+    const button_c = []
+    $('.btn').on('click', function () {
+      var id = $(this).attr("id");
+      console.log(id)
+      alert(id);
+
+      button_c.push(1)
+      console.log(button_c)
+      console.log(button_c.length)
+    });
+  </script>
 </body>
 
 </html>
