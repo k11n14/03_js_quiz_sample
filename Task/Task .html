@@ -72,6 +72,7 @@
     const question_answer_number = [];
     const button_c = [];
 
+
     // ループ構文でanswersの長さの数だけ、出題文に対する答えを出力
     for (let i = 0; i < Card_date[question_answer_number.length].answers.length; i++) {
       question_text.push(
@@ -113,8 +114,13 @@
         }
         $("#Echo").html(question_text);
         console.log(question_text)
-      } 
-      else if(button_c.length===Card_date.length){ $("#Echo").html("") }
+      }
+      else if (button_c.length === Card_date.length) {
+        $("#Echo").html("カード名<input type=\"text\" id=\"Card_name\">")
+        const card_name = [];
+        const card_name_text = $("#Card_name").val();
+        // tweets.unshift("<p class=\"New\">" + tw + "</p>");
+      }
 
 
       console.log(question_answer_number.length)
