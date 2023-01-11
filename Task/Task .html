@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h1>カード登録＆検索機（仮）</h1>
+  <h1>MTGカード登録＆検索機（仮）</h1>
   <!-- <p id = "Caed_name"></p>
 <p id="Caed_cost"></p>
 <p id="Caed_coloer"></p>
@@ -33,6 +33,10 @@
     <li><button id="answer05">5</button></li> -->
 
   </ul>
+
+  <div id="Selection_text"></div>
+  <button id=Keep>保存</button>
+  <button id=Keep>検索</button>
 
   <script>
     const Card_date = [
@@ -117,10 +121,10 @@
       }
       else if (button_c.length === Card_date.length) {
         $("#Echo").html("カード名<input type=\"text\" id=\"Card_name\">")
-        const card_name = [];
-        const card_name_text = $("#Card_name").val();
-        card_name.unshift("card_name_text");
-        console.log(card_name)
+        // const card_name = [];
+        // const card_name_text = $("#Card_name").val();
+        // card_name.unshift("card_name_text");
+        // console.log(card_name)
       }
 
 
@@ -131,13 +135,21 @@
       const id = $(this).text();
       console.log(id)
       $("#Selection_text").append(id + " ")
-
-
     });
-    console.log()
+
+    $("#Keep").on("click", function () {
+      // alert("ok")
+      const card_name = [];
+      const card_name_text = $("#input").text();
+      console.log($("#input").val())
+      card_name.unshift(card_name_text);
+      console.log(card_name)
+    });
+
   </script>
-  <button>戻る</button>
-  <div id="Selection_text"></div>
+
+  <!-- <div id="Selection_text"></div>
+  <button id=Keep>保存</button> -->
 
 </body>
 
